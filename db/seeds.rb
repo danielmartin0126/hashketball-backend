@@ -19,9 +19,9 @@ all_pages.each do |i|
     # uri = URI.parse(URI.encode(url.strip))
     # byebug
   player_string = RestClient.get(url)
-  player_hash = JSON.parse(player_string) 
-  player_hash["data"].each do |player|
+  player_hash = JSON.parse(player_string)
+  most_players = player_hash["data"].select { |p| p["position"] != ""}
+  most_players.each do |player|
     Player.find_or_create_by(f_name: player["first_name"], l_name: player["last_name"], position: player["position"], api_id:player["id"])
   end
-end 
-
+end
