@@ -4,6 +4,7 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
       t.string :f_name
       t.string :l_name
       t.string :position
+      t.string :team_name
       t.boolean :starting, default: false
 
       t.timestamps
