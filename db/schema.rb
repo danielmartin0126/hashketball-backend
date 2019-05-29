@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_181049) do
     t.string "f_name"
     t.string "l_name"
     t.string "position"
+    t.string "team_name"
     t.boolean "starting", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

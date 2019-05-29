@@ -6,7 +6,7 @@ class Api::V1::PlayersController < ApplicationController
       end
 
     def show
-      puts "hi"
+    
     end
 
 
