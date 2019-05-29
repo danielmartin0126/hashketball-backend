@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Player.find_or_create_by(f_name:"Josh", l_name:"Smith", position:"F")
-User.create(name:"danny", team_name:"Dunkaroos", profile_pic:"hi")
 
 
 
