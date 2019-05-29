@@ -6,7 +6,7 @@ class PlayersController < ApplicationController
       end
 
     def show
-      puts "hi"
+    
     end
 
 
