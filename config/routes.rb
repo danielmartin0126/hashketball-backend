@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :drafts
       post '/auth', to: 'auth#create'
       post '/register', to: 'users#create'
-
+      post '/draft', to: 'drafts#create'
     end
   end
 
