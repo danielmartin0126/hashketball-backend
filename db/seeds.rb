@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Player.find_or_create_by(f_name:"Josh", l_name:"Smith", position:"F")
+
 
 
 
@@ -18,9 +18,9 @@ all_pages.each do |i|
     # uri = URI.parse(URI.encode(url.strip))
     # byebug
   player_string = RestClient.get(url)
-  player_hash = JSON.parse(player_string) 
-  player_hash["data"].each do |player|
-    Player.find_or_create_by(f_name: player["first_name"], l_name: player["last_name"], position: player["position"], api_id:player["id"])
+  player_hash = JSON.parse(player_string)
+  most_players = player_hash["data"].select { |p| p["position"] != ""}
+  most_players.each do |player|
+    Player.find_or_create_by(f_name: player["first_name"], l_name: player["last_name"], position: player["position"], api_id:player["id"], team_name: player["team"]["name"])
   end
-end 
-
+end
