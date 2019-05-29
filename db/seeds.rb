@@ -7,10 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(name:"danny", team_name:"Dunkaroos", profile_pic:"hi")
-
-
-
 all_pages = (1..32).to_a
 
 
