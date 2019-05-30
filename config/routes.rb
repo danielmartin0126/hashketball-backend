@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       post '/auth', to: 'auth#create'
       post '/register', to: 'users#create'
       post '/draft', to: 'drafts#create'
+      get '/find', to: 'drafts#delete'
+
+      get '/delete', to: 'drafts#delete'
+
     end
   end
 

@@ -8,4 +8,7 @@ class Api::V1::DraftsController < ApplicationController
     @all = Draft.all
     render json: @all
   end
+
+
+
 end
