@@ -10,6 +10,7 @@ class Api::V1::DraftsController < ApplicationController
     render json: @all
   end
 
+
   def show
     @draft = Draft.find(params[:id])
     render json: @draft
@@ -19,4 +20,5 @@ class Api::V1::DraftsController < ApplicationController
     @draft = Draft.find(params[:id])
     @draft.destroy
   end
+
 end
